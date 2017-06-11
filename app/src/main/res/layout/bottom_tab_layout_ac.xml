@@ -2,14 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="match_parent">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bnv_menu"/>
+        android:layout_above="@+id/bnv_menu"
+        />
 
 
     <!--底部导航栏BottomNavigationView-->
@@ -21,15 +21,13 @@
         android:background="@color/colorTextIcons"
         app:itemIconTint="@color/item_bottom_nav_selector"
         app:itemTextColor="@android:color/darker_gray"
-        app:menu="@menu/menu_bottom_navigation">
-
-    </android.support.design.widget.BottomNavigationView>
+        app:menu="@menu/menu_bottom_navigation"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:layout_above="@id/bnv_menu"
-        android:background="@drawable/bottom_shadow"/>
+        android:layout_above="@+id/bnv_menu"
+        android:background="@drawable/bottom_shadow" />
 
 
 </RelativeLayout>
