@@ -17,21 +17,4 @@ public class BaseFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
-//    @Nullable
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//        View view = inflater.inflate(R.layout.fragment_base, null);
-//        TextView tvInfo = (TextView) view.findViewById(R.id.textView);
-//        tvInfo.setText(getArguments().getString("info"));
-//        tvInfo.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Snackbar.make(v, "Don't click me.please!.", Snackbar.LENGTH_SHORT).show();
-//            }
-//        });
-//        return view;
-//    }
-
-
 }

@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
 
 import com.example.administrator.azuresong.R;
@@ -40,6 +39,7 @@ public class BaseActivity extends AppCompatActivity implements BottomNavigationV
         mBnvMenu.setOnNavigationItemSelectedListener(this);
 
         viewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -65,6 +65,7 @@ public class BaseActivity extends AppCompatActivity implements BottomNavigationV
     }
 
     private void setupViewPager(ViewPager viewpager) {
+
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new ZhihuDailyFragment());
         adapter.addFragment(new MeiziFragment());
@@ -75,7 +76,7 @@ public class BaseActivity extends AppCompatActivity implements BottomNavigationV
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        Log.d("TAG", item.getItemId() + " item was selected-------------------");
+
         switch (item.getItemId()) {
             case R.id.action_zhihu:
                 viewpager.setCurrentItem(0);
